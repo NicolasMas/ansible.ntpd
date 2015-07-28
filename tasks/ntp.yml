@@ -1,0 +1,6 @@
+---
+  - name: ntp | yum install
+    yum: name=ntp state=installed
+
+  - name: ntp | demonized
+    service: name={{ ntp_service_name }} state=started enabled=yes
